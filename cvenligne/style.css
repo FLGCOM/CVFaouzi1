@@ -1,0 +1,158 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI-Bold-webfont.woff2") format("woff2"),
+            url("/fonts/Segoe UI-Bold-webfont.woff") format("woff");
+}
+@font-face {
+    font-family: "Script MT";
+    src: url("/fonts/ScriptMTbold-Regular-webfont.woff2") format("woff2"),
+            url("/fonts/ScriptMTregular-Regular-webfont.woff") format("woff"),
+                url("/fonts/ScriptMTregular-Regular-webfont.eot") format("eot"),
+                    url("/fonts/ScriptMTregular-Regular-webfont.ttf") format("ttf");
+}
+
+body {
+    color:black;
+    background-color:white;
+    background-image:url(brickbackground.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.navbar-brand a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.text-top{
+    font-family: Script MT Bold;
+    text-align: center;
+    line-height: 80px;
+    font-size: 130px;
+    position: relative; top: 250px;
+    transform: rotate(-8deg);
+    color: whitesmoke;
+}
+
+.text-bottom a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 0px;
+    letter-spacing: 30px;
+    font-size: 25px;
+    position: relative; top: 290px;
+    text-decoration: none;
+}
+
+h2{
+    font-family: Script MT bold, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 75px;
+    transform: rotate(-8deg);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.aboutmetext{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 25% 0 25%;
+    text-align: justify;
+}
+
+.fond {
+    background: white;
+    position: fixed; /* Le fond est fixé en haut de la page */
+    width: 100%; /* Il occupe toute la largeur de l'écran */
+    height: 920px; /* On met ici la même hauteur que le jumbotron */
+    top:0;
+    left:0;
+    z-index: -1;
+   }
+   .jumbotron {
+    width: 100%;
+    margin-top: 920px;
+    height: 920px;
+    color: rgb(0, 0, 0); /* Le texte sera affiché en blanc */
+    background: white;
+   }
+
+/*DEBUT code css de l'animation*/
+  p{
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0 20px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  p:nth-child(1) a {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(1) a:hover {
+    color: #ffffff;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fd0000, 0 0 70px #fd0000, 0 0 80px #fd0000, 0 0 100px #fd0000, 0 0 150px #fd0000;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fd0000, 0 0 35px #fd0000, 0 0 40px #fd0000, 0 0 50px #fd0000, 0 0 75px #fd0000;
+    }
+  }
+/*FIN code css de l'animation*/
+
+
+/*format pour iphone 5*/
+@media screen and (max-width: 375px) {
+    .body{ 
+        background-attachment:fixed;
+    } 
+    
+    .navbar-brand {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .nav-item .nav-link{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .text-top{
+        line-height: 40px;
+        font-size: 70px;
+        transform: rotate(-8deg);
+        position: relative; top: 180px;
+    }
+    
+    .text-bottom a{
+        line-height: 0px;
+        letter-spacing: 15px;
+        font-size: 15px;
+        position: relative; top: 210px;
+    }
